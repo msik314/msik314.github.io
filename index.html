@@ -11,7 +11,9 @@
         
         .head{
             margin-top: 2rem;
-            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
         
         .main{
@@ -26,12 +28,24 @@
             margin-right: auto;
         }
         
-        .prjGrid{
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 50% 50%;
+        @media only screen and (max-width: 900px) {
+            .prjGrid{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                display: grid;
+                grid-template-columns: 100%;
+            }
+        }
+        
+        @media only screen and (min-width: 900px) {
+            .prjGrid{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
         }
         
         .prjDiv{
@@ -47,9 +61,6 @@
         }
         
         .portrait{
-            position: absolute;
-            right: 0;
-            top: 0;
             height: 100%;
         }
         
@@ -60,16 +71,21 @@
         .tightText{
             margin-bottom: 0;
         }
+        
         </style>
     </head>
     <body>
         <div class="center70">
             <div id="header" class="head">
-                <h1>Max Sichel</h1>
-                <p class="h3">Sotware Engineer &middot; Game Developer</p>
-                <p class="tightText"><a class="link-dark" href="https://github.com/msik314">github.com/msik314</a></p>
-                <p class="tightText">msik314@gmail.com</p>
-                <img src="/res/headshot.jpg" alt="Portrait" class="portrait"></img>
+                <div>
+                    <h1>Max Sichel</h1>
+                    <p class="h3">Sotware Engineer &middot; Game Developer</p>
+                    <p class="tightText"><a class="link-dark" href="https://github.com/msik314">github.com/msik314</a></p>
+                    <p class="tightText">msik314@gmail.com</p>
+                </div>
+                <div>
+                    <img src="/res/headshot.jpg" alt="Portrait" class="portrait"></img>
+                </div>
             </div>
             <hr>
             <div id="body" class="main mx-auto">
