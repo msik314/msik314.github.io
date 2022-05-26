@@ -110,6 +110,27 @@
                         </p>
                     </div>
                     <div class="prjDiv">
+                        <img class="w-100 screenshot" src="/res/catEcs.png" alt="Screenshot of a CatECS demo"></img>
+                        <p class="h3">CatECS/Cat Engine</h3>
+                        <p>
+                            <a href="/res/catform.zip" class="btn btn-primary" download>Download</a>
+                            <a href="https://github.com/msik314/catform" class="btn btn-success">Github</a>
+                        </p>
+                        <p>
+                            Cat Engine is my own personal game engine.  Its core is written in C, with some of the ECS systems being in
+                            C++.  This demo demonstrates the engine's Entity Component System, scene loading, and prefabs.  Scenes are
+                            loaded from specially formatted JSON files, and can be added to other scenes as prefabs.  This demo uses a
+                            simple OpenGL sprite renderer.
+                        </p>
+                        <p>
+                            While the demo is currently running in a single thread, the ecs supports multiple threads.  The ECS is set up
+                            to minimize the amount of code that has to be thread-safe.  The schedule is set up on engine starup, and systems
+                            are run on separate threads using a simple work-sharing approach.  Each system can only write to the table column it
+                            is responsible for updating.  The main thread is responsible for polling input and swapping the back buffer after
+                            all of the systems are finished for each frame.
+                        </p>
+                    </div>
+                    <div class="prjDiv">
                         <img class="w-100 screenshot" src="/res/ray.png" alt="Screenshot of a raytraced reflection demo"></img>
                         <p class="h3">Ray Reflect</h3>
                         <p>
@@ -117,7 +138,10 @@
                             <a href="https://github.com/msik314/RayReflect" class="btn btn-success">Github</a>
                         </p>
                         <p>
-                            Ray Reflect is a technical demo of shader-based raytraced reflections.  It was made as part of my research and experimenting with both Vulkan and ray tracing.  Lighting is calculated with a deferred renderer: the first pass renderes a G buffer with all the data needed for lighting calculations.  The second step does those lighting calculations and casts a ray to determine reflections.  Ray intersection is calculated as part of the fragment shader during the second pass. 
+                            Ray Reflect is a technical demo of shader-based raytraced reflections.  It was made as part of my research and experimenting with both Vulkan and ray
+                            tracing.  Lighting is calculated with a deferred renderer: the first pass renderes a G buffer with all the data needed for lighting calculations.  The
+                            second step does those lighting calculations and casts a ray to determine reflections.  Ray intersection is calculated as part of the fragment shader
+                            during the second pass. 
                         </p>
                     </div>
                     <div class="prjDiv">
@@ -131,19 +155,6 @@
                             3D Pool Simulation was a primarily a physics demonstration.  The physics engine simulates a set of spheres bouncing
                             around a box, and a simple core OpenGL based renderer draws them as wireframes.  Move the mouse around to aim, and
                             click and hold left mouse to charge up and fire.  I made all the physics, graphics, and sounds for the program.
-                        </p>
-                    </div>
-                    <div class="prjDiv">
-                        <img class="w-100 screenshot" src="/res/fistFight.png" alt="Screenshot of Fist Fight"></img>
-                        <p class="h3">Fist Fight Game</h3>
-                        <p>
-                            <a href="https://drive.google.com/file/d/1WEyeY27_YTFuVnwIGpJwrELHGpsUqPrG/view?usp=sharing" class="btn btn-primary">Download</a>
-                            <a href="https://github.com/msik314/FistFight" class="btn btn-success">Github</a>
-                        </p>
-                        <p>Fist Fight is a game about fists and faces.  There is only one goal: punch.  There is only one rule: there are no rules.</p>
-                        <p>
-                            Fist fight was made at as part of one of RPI Game Development Club's 24hr game jam.  It was a bit of an experiment in
-                            multitasking.  Each player controls both of their character's fists at once, one with each joystick.
                         </p>
                     </div>
                 </div>
