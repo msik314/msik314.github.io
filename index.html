@@ -72,6 +72,10 @@
             margin-bottom: 0;
         }
         
+        .italics{
+            font-style: italic;
+        }
+        
         </style>
     </head>
     <body>
@@ -128,6 +132,9 @@
                             are run on separate threads using a simple work-sharing approach.  Each system can only write to the table column it
                             is responsible for updating.  The main thread is responsible for polling input and swapping the back buffer after
                             all of the systems are finished for each frame.
+                        </p>
+                        <p class="italics">
+                            Note: This will not compile under MSVC.  It uses certain aspects of the C99 standard which MSVC does not support.
                         </p>
                     </div>
                     <div class="prjDiv">
